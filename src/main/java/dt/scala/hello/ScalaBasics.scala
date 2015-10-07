@@ -4,6 +4,7 @@ import scala.io.Source
 
 /**
  * Created by hadoop on 2015/9/23.
+ * Scala函数定义、流程控制、异常处理入门
  */
 object ScalaBasics {
 
@@ -18,12 +19,12 @@ object ScalaBasics {
     b
   }
 
-//  var line = ""
-//  do {
-//    println("Please input some words blow......")
-//    line = readLine()
-//    println("Read: " + line)
-//  } while (line != "")
+  //  var line = ""
+  //  do {
+  //    println("Please input some words blow......")
+  //    line = readLine()
+  //    println("Read: " + line)
+  //  } while (line != "")
 
   def doWhile() {
     var line = ""

@@ -2,6 +2,7 @@ package dt.scala.oop
 
 /**
  * Created by hadoop on 2015/9/27.
+ * Scala中的继承：超类的构造、重写字段、重写方法
  */
 object OverrideOps {
 

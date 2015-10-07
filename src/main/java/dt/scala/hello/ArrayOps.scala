@@ -6,6 +6,7 @@ import scala.collection.mutable.ArrayBuffer
 
 /**
  * Created by hadoop on 2015/9/26.
+ * Scala数组操作
  */
 object ArrayOps {
 

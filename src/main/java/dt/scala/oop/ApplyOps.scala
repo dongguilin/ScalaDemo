@@ -2,6 +2,7 @@ package dt.scala.oop
 
 /**
  * Created by hadoop on 2015/9/27.
+ * Scala中的apply
  */
 object ApplyOps {
   def main(args: Array[String]) {

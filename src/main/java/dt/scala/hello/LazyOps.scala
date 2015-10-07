@@ -4,6 +4,7 @@ import scala.io.Source
 
 /**
  * Created by hadoop on 2015/9/26.
+ * Lazy的使用
  */
 object LazyOps {
 

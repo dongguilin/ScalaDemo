@@ -2,6 +2,7 @@ package dt.scala.oop
 
 /**
  * Created by hadoop on 2015/9/27.
+ * 抽象类、抽象字段、抽象方法
  */
 class AbstractClassOps {
   var id: Int = _

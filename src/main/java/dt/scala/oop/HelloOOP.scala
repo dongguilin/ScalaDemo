@@ -2,6 +2,7 @@ package dt.scala.oop
 
 /**
  * Created by hadoop on 2015/9/27.
+ * Scala类的属性和对象私有字段
  */
 object HelloOOP {
 

@@ -2,6 +2,7 @@ package dt.scala.hello
 
 /**
  * Created by hadoop on 2015/9/26.
+ * For与Function进阶
  */
 object ForFunctionAdvanced {
 
