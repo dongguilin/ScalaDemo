@@ -22,6 +22,7 @@ object CaseClassObject {
     caseOps(Student(19))
     caseOps(Shared)
 
+    //copy方法和带名参数
     val worker = Worker(29, 10000.1)
     val worker2 = worker.copy(salary = 19.95)
     val worker3 = worker.copy(age = 30)
