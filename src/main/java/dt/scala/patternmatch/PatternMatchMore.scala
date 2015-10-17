@@ -75,11 +75,12 @@ object PatternMatchMore {
     case class Currency(value: Double, unit: String) extends Amount
     case object Nothing extends Amount //样例对象
 
-    Dollar(11) match {
-      case Dollar(v) => "$" + v
-      case Currency(_, u) => "Oh noes,I got " + u
-      case Nothing => ""
-    }
+    //TODO
+//    Dollar(11) match {
+//      case Dollar(v) => "$" + v
+//      case Currency(_, u) => "Oh noes,I got " + u
+//      case Nothing => ""
+//    }
 
 
   }
