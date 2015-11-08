@@ -14,7 +14,7 @@ object ViewBounds {
     val pairInt = new Pair_NotPerfect[Int](3, 5) //Int会被隐式转换为RichInt，RichInt实现了Comparable
     println(pairInt.bigger)
 
-    val pair_better_string = new Pair_Perfect[String]("Spark", "Hadoop")//String可以被隐式转换为RichString,而RichString是Ordered[String]的子类型
+    val pair_better_string = new Pair_Perfect[String]("Spark", "Hadoop") //String可以被隐式转换为RichString,而RichString是Ordered[String]的子类型
     println(pair_better_string.bigger)
 
     val pair_better_int = new Pair_Perfect[Int](3, 5)

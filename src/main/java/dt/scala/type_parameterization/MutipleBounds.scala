@@ -10,17 +10,19 @@ package dt.scala.type_parameterization
  * T <% A <% B      视图界定，T可以隐式转换为A的类型且同时可以隐式转换为B的类型（并）
  */
 class M_A[T]
+
 class M_B[T]
+
 object MutipleBounds {
 
   def main(args: Array[String]) {
     implicit val a = new M_A[Int]
     implicit val b = new M_B[Int]
-    def foo[T : M_A : M_B](i:T) = println("OK")
+    def foo[T: M_A : M_B](i: T) = println("OK")
     foo(11)
 
     //error
-//    foo("hello")
+    //    foo("hello")
   }
 
 }

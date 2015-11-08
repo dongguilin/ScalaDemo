@@ -2,7 +2,7 @@ package dt.scala.type_parameterization
 
 /**
  * Created by hadoop on 2015/11/5.
- * Infix Type
+ * 中子类型 Infix Type
  */
 object Infix_Types {
 

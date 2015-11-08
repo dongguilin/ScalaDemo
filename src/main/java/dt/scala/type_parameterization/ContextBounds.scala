@@ -18,7 +18,8 @@ object ContextBounds {
 }
 
 class Pair_Ordering[T: Ordering](val first: T, val second: T) {
-  def bigger(implicit ordered: Ordering[T]) = {//ordered为添加的隐式参数
+  def bigger(implicit ordered: Ordering[T]) = {
+    //ordered为添加的隐式参数
     if (ordered.compare(first, second) > 0) first else second
   }
 }
