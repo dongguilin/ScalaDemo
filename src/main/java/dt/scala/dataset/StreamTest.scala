@@ -36,7 +36,17 @@ object StreamTest {
     println(lines) //Stream(abc, ?)
     println(lines(3)) //hello aa word hehe
     println(lines) //Stream(abc, 呵呵, abc, hello aa word hehe, ?)
+    println(lines.toVector) //Vector(abc, 呵呵, abc, hello aa word hehe, abc)
     println(lines.take(4).force) //Stream(abc, 呵呵, abc, hello aa word hehe)
+    println(lines.take(4).force.toList) //List(abc, 呵呵, abc, hello aa word hehe)
+
+    //TODO ?怎么用
+    //    println(lines.takeWhile(p => {
+    //      println(p)
+    //      p.startsWith("hello")
+    //    }))
+
+    println(numsFrom(2).takeWhile(_ <= 5).mkString(",")) //2,3,4,5
 
 
   }
