@@ -8,6 +8,7 @@ import org.scalatest.FunSuite
   * <p>
   * 1.提取器就是一个带有unapply方法的对象，可以把unapply方法当做是伴生对象中apply方法的反向操作
   * 2.每一个样例类都自动具备apply和unapply方法
+  * 3.unapplySeq提取任意长度的序列
   * </p>
   */
 class TestExtractor extends FunSuite {
@@ -117,6 +118,25 @@ class TestExtractor extends FunSuite {
   test("带单个参数或无参数的提取器") {
     val Number(n) = "123"
     assertResult(123)(n)
+  }
+
+  object Students {
+    def unapplySeq(arg: String): Option[Seq[String]] = {
+      if (arg.trim == "") None else Some(arg.trim.split("\\s+"))
+    }
+  }
+
+  test("unapplySeq") {
+    val obj: Object = "张三 李四 hello tom"
+    assertResult("four") {
+      obj match {
+        case Students(n1, n2) => "two"
+        case Students(n1, n2, n3) => "three"
+        case Students("张三", n2, n3, n4) => "four"
+        case _ => "something else"
+      }
+    }
+
   }
 
 
