@@ -87,6 +87,9 @@ class TestOperator extends FunSuite {
   //后置操作符优先级低于中置操作符
   test("优先级") {
     //a 中置操作符 b 后置操作符
+
+    println(3 + 4 -> 5)
+    println(3 -> (4 + 5))
   }
 
   //scala中，所有操作符都是左结合的，除了：1.以冒号:结尾的操作符; 2.赋值操作符; 3.用于构造列表的::操作符

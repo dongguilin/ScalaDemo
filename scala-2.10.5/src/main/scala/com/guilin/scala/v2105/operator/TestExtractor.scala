@@ -136,7 +136,59 @@ class TestExtractor extends FunSuite {
         case _ => "something else"
       }
     }
+  }
 
+  //抽取文件的路径、文件名、文件后缀名
+  test("unapply RichFile") {
+    class RichFile(val path: String) {}
+    object RichFile {
+      def apply(path: String): RichFile = new RichFile(path)
+
+      def unapply(arg: RichFile): Option[(String, String, String)] = {
+        if (arg.path == null) None
+        else {
+          val reg = "([/\\w+]+)/(\\w+)\\.(\\w+)".r
+          val reg(r1, r2, r3) = arg.path
+          Some((r1, r2, r3))
+        }
+      }
+    }
+
+    val richFile = RichFile("/home/cay/readme.txt")
+    val RichFile(path, name, suffix) = richFile
+    assertResult("/home/cay")(path)
+    assertResult("readme")(name)
+    assertResult("txt")(suffix)
+
+  }
+
+  //抽取路径段
+  test("unapplySeq RichFile") {
+    class RichFile(val path: String) {}
+    object RichFile {
+      def apply(path: String): RichFile = new RichFile(path)
+
+      def unapplySeq(richFile: RichFile): Option[Seq[String]] = {
+        if (richFile.path == null) None
+        else {
+          var path = richFile.path.trim
+          if (path.trim.charAt(0) == '/') path = path.substring(1)
+          Some(path.split("/"))
+        }
+      }
+    }
+
+    val richFile = RichFile("/home/cay/readme.txt/")
+    val RichFile(r@_*) = richFile
+    assertResult("WrappedArray(home, cay, readme.txt)")(r.toString())
+
+    try {
+      val RichFile(r@_*) = RichFile(null)
+    } catch {
+      case ex: MatchError => {
+        ex.getMessage()
+      }
+    }
   }
 
 
