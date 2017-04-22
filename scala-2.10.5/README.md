@@ -7,3 +7,6 @@
 
 - patternmatch 模式匹配
     - TestMatch
+
+- func 高阶函数
+    - TestFunc
