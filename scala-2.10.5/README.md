@@ -9,4 +9,5 @@
     - TestMatch
 
 - func 高阶函数
-    - TestFunc
+    
+- testtrait 特质

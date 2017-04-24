@@ -4,7 +4,6 @@ import java.awt.Color
 
 import org.scalatest.FunSuite
 
-import scala.swing.Color
 
 /**
   * Created by Administrator on 2017/4/8.
