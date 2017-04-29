@@ -1,5 +1,12 @@
 ## moudle scala-2.10.5
 
+- file  文件
+
+- func 高阶函数
+
+- oo 面向对象
+    - TestClass 类
+    
 - operator 操作符
     - TestOperator # 标识符、中置操作符、一元操作符、赋值操作符、优先级、结合性
     - TestApplyAndUpdate # apply和update方法
@@ -7,12 +14,10 @@
 
 - patternmatch 模式匹配
     - TestMatch
-
-- func 高阶函数
     
+- regex   正则表达式
+
 - testtrait 特质
 
-- file  文件
 
-- pattern   正则表达式
 
