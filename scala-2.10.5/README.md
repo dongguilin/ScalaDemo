@@ -11,3 +11,8 @@
 - func 高阶函数
     
 - testtrait 特质
+
+- file  文件
+
+- pattern   正则表达式
+

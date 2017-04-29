@@ -53,6 +53,20 @@
     </repositories>
 
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/scala</directory>
+                <filtering>false</filtering>
+                <includes>
+                    <include>**/*.txt</include>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+
         <plugins>
             <plugin>
                 <groupId>net.alchim31.maven</groupId>
