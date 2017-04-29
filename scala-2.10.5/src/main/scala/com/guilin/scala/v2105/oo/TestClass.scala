@@ -8,6 +8,7 @@ import scala.collection.mutable.ArrayBuffer
 
 /**
   * Created by Administrator on 2017/4/29.
+  * 类
   * <pre>
   * 1.在scala中，类并不声明为public,scala源文件可以包含多个类，所有这些类都具有公有可见性
   * 2.scala类中的字段与java或c++中的字段不同，scala中的字段是一个私有字段，加上getter方法(对val字段而言)或者getter和setter方法(对var字段而言)
@@ -17,10 +18,10 @@ class TestClass extends FunSuite {
 
   test("简单类和无参方法") {
     class Counter {
-      private var value = 0 //必须初始化字段
+      private var value = Int.MaxValue //必须初始化字段
+      //方法默认是公有的
       def increment() {
-        //方法默认是公有的
-        value += 1
+        if (value < Int.MaxValue) value + 1 else value
       }
 
       def current() = value
