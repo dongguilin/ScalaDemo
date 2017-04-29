@@ -13,5 +13,7 @@ object HelloApp extends App {
 object Hello {
   def main(args: Array[String]): Unit = {
     println("Hello, World!")
+    var password = Console.readLine
+    println("hehe" + password)
   }
 }
