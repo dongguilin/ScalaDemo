@@ -68,7 +68,7 @@ class TestFunc extends FunSuite {
     def fun1(a: Double) = (x: String) => x + (a * 2).toString
 
     val a = fun1(2)
-    assertResult("hello4.0")(fun1(2))
+    assertResult("hello4.0")(a("hello"))
   }
 
   test("SAM转换") {

@@ -14,7 +14,7 @@ import scala.sys.process._
   */
 class TestProcess extends FunSuite {
 
-  test("进程控制") {
+  ignore("进程控制") {
     //显示上层目录的所有文件，执行结果被打印到标准输出
     "ls -al .." !
     //    val result = "ls -al .." !!
